@@ -1,6 +1,7 @@
 package Login;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,6 +17,8 @@ public class mainform{
 
 
                 JFrame frame = new JFrame("Virtual Fridge login");
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                frame.setPreferredSize(new Dimension(375, 812));
                 frame.setContentPane(new Loginscherm().mainview);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
