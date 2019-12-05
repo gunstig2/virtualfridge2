@@ -1,6 +1,5 @@
 package Login;
 
-import Calculator.Calcscherm;
 import Login.Dashboard.DashboardScherm;
 import sun.rmi.runtime.Log;
 
