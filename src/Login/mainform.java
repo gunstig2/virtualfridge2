@@ -29,6 +29,7 @@ public class mainform{
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("BeginScherm");
+        frame.setPreferredSize(new Dimension(375, 812));
         frame.setContentPane(new mainform().hoofdscherm);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();

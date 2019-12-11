@@ -19,7 +19,9 @@
           <foreground color="-15125695"/>
           <hideActionText value="false"/>
           <icon value="images/Webp.net-resizeimage.png"/>
+          <opaque value="true"/>
           <text value=""/>
+          <visible value="true"/>
         </properties>
         <clientProperties>
           <hideActionText class="java.lang.Boolean" value="false"/>

@@ -5,6 +5,7 @@ import javax.swing.*;
 public class DashboardScherm{
 
     public JPanel mainview;
+    private JButton button1;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("BeginScherm");
