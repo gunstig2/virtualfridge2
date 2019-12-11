@@ -1,11 +1,7 @@
 package Login;
 
-<<<<<<< HEAD
+
 import Login.Dashboard.DashboardPage;
-=======
-import Login.Dashboard.DashboardScherm;
-import sun.rmi.runtime.Log;
->>>>>>> dev
 
 import javax.swing.*;
 import java.awt.*;
