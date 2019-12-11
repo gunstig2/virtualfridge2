@@ -1,7 +1,6 @@
 package Login;
 
-import Login.Dashboard.DashboardScherm;
-import sun.rmi.runtime.Log;
+import Login.Dashboard.DashboardPage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,14 +22,14 @@ public class Loginscherm {
             public void actionPerformed(ActionEvent e) {
                 // wanneer er op inloggen wordt gedrukt
 
-                String username = String.valueOf(gebruikersnaam.getText());
-                System.out.println(username);
+//                String username = String.valueOf(gebruikersnaam.getText());
+//                System.out.println(username);
 
                 JFrame frame = new JFrame("Dashboard");
                 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 
                 frame.setPreferredSize(new Dimension(450, 812));
-                frame.setContentPane(new DashboardScherm().mainview);
+                frame.setContentPane(new DashboardPage().mainview);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);

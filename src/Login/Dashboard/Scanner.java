@@ -3,15 +3,14 @@ package Login.Dashboard;
 import javax.swing.*;
 import java.awt.*;
 
-public class DashboardScherm{
-
+public class Scanner {
     public JPanel mainview;
-    private JButton button1;
+
 
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame("BeginScherm");
-        frame.setContentPane(new DashboardScherm().mainview);
+        JFrame frame = new JFrame("Scanner");
+        frame.setContentPane(new Scanner().mainview);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
@@ -20,4 +19,3 @@ public class DashboardScherm{
         frame.setPreferredSize(new Dimension(450, 812));
     }
 }
-
