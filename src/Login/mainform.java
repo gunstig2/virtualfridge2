@@ -18,7 +18,7 @@ public class mainform{
 
                 JFrame frame = new JFrame("Virtual Fridge login");
                 Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-                frame.setPreferredSize(new Dimension(375, 812));
+                frame.setPreferredSize(new Dimension(450, 812));
                 frame.setContentPane(new Loginscherm().mainview);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
