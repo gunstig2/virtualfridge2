@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.*;
 
 public class mainform{
     public JPanel hoofdscherm;
@@ -28,6 +29,16 @@ public class mainform{
     }
 
     public static void main(String[] args) {
+        try {
+            String url = "jdbc:mysql://localhost:3306/Challenge?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+            String user = "root";
+            String password = "";
+            Connection myConn = DriverManager.getConnection(url,user,password);
+            System.out.println("Woke");
+        } catch (SQLException err) {
+            System.out.println(err.getMessage());
+        }
+
         JFrame frame = new JFrame("BeginScherm");
         frame.setPreferredSize(new Dimension(375, 812));
         frame.setContentPane(new mainform().hoofdscherm);
