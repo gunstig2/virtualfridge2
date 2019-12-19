@@ -1,5 +1,7 @@
 package Login;
 
+import com.sun.org.apache.bcel.internal.classfile.SourceFile;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -28,23 +30,37 @@ public class mainform{
         });
     }
 
-    public static void main(String[] args) {
+    public static void connect(){
+
         try {
-            String url = "jdbc:mysql://localhost:3306/Challenge?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
-            String user = "root";
-            String password = "";
-            Connection myConn = DriverManager.getConnection(url,user,password);
-            System.out.println("Woke");
+            String host = "jdbc:mysql://localhost:8080/Challenge";
+            String uName = "root";
+            String uPass = "";
+            Connection con = DriverManager.getConnection(host, uName, uPass);
+
+            Statement stat = con.createStatement();
+            String sql = "select * from Gebruiker";
+            ResultSet rs = stat.executeQuery(sql);
+
+            while ( rs.next()) {
+//                int id_col = rs.getInt("Gebruikerscode");
+                String first_name = rs.getString("Gebruikersnaam");
+                String last_name = rs.getString("Email");
+                String job = rs.getString("Wachtwoord");
+
+                String p = first_name + " " + last_name + " " + job;
+                System.out.println(p);
+            }
+
         } catch (SQLException err) {
             System.out.println(err.getMessage());
         }
 
-        JFrame frame = new JFrame("BeginScherm");
-        frame.setPreferredSize(new Dimension(375, 812));
-        frame.setContentPane(new mainform().hoofdscherm);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
     }
+
+    public static void main(String[] args) {
+        connect();
+    }
+
 }
 
